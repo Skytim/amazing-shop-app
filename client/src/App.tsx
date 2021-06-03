@@ -1,3 +1,4 @@
+import { data } from './Mockdata';
 function App() {
   return (
     <div className="grid-container">
@@ -12,186 +13,38 @@ function App() {
       </header>
       <main>
         <div className="row center">
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
+          {
+            data.products.map(product => {
+              return (
+                <div key={product._id} className="card">
+                  <a href="product.html">
+                    <img className="medium" src={product.image} alt={product.name} />
+                  </a>
+                  <div className="card-body">
+                    <a href={product.image}>
+                      <h2>{product.name}</h2>
+                    </a>
+                    <div className="rating">
+                      <span><i className="fa fa-star"></i>
+                      </span>
+                      <span><i className="fa fa-star"></i>
+                      </span>
+                      <span><i className="fa fa-star"></i>
+                      </span>
+                      <span><i className="fa fa-star"></i>
+                      </span>
+                      <span><i className="fa fa-star"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="price">
+                    $ {product.price}
+                    </div>
                 </div>
+              )
+            })
+          }
 
-          </div>
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
-                </div>
-
-          </div>
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
-                </div>
-
-          </div>
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
-                </div>
-
-          </div>
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
-                </div>
-
-          </div>
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
-                </div>
-
-          </div>
-          <div className="card">
-            <a href="product.html">
-              <img className="medium" src="./images/product-1.png" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Toy G</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star"></i>
-                </span>
-                <span><i className="fa fa-star-half"></i></span>
-                <span><i className="fa fa-star-o"></i></span>
-              </div>
-            </div>
-            <div className="price">
-              $ 120
-                </div>
-
-          </div>
         </div>
       </main>
       <footer className="row center">
