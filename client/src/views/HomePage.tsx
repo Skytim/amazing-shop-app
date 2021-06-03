@@ -4,6 +4,7 @@ import Product from '../components/Product'
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { ProductType } from '../types/ProductType';
+import { productData } from '../api';
 
 export default function HomePage() {
     const [products, setProducts] = useState<ProductType[]>([]);
@@ -13,7 +14,7 @@ export default function HomePage() {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const { data } = await axios.get('/api/products');
+                const { data } = await productData();
                 setLoading(false);
                 setProducts(data);
             } catch (err) {

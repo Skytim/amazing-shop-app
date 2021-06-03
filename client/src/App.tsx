@@ -8,7 +8,7 @@ import HomePage from './views/HomePage';
 import ProductPage from "./views/ProductPage";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="grid-container">
         <header className="row">
           <div>

@@ -19,7 +19,7 @@ export default function ProductPage({ match }: RouteComponentProps<RouteInfo>) {
             <Link to="/">Back to Result</Link>
             <div className="row top">
                 <div className="col-2">
-                    <img className="large" src={product?.image} alt="" />
+                    <img className="large" src={process.env.PUBLIC_URL +product?.image} alt="" />
                 </div>
                 <div className="col-1">
                     <ul>

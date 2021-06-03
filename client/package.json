@@ -1,6 +1,5 @@
 {
   "name": "client",
-  "proxy": "https://arcane-badlands-11766.herokuapp.com",
   "version": "0.1.0",
   "homepage": "http://skytim.github.io/amazing-shop-app",
   "private": true,
