@@ -13,7 +13,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#root{
+
+#root {
   height: 100%;
 }
 
@@ -122,4 +123,8 @@ img.medium {
 .rating span {
   color: palevioletred;
   margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: #000814;
 }
