@@ -2,10 +2,11 @@
   "name": "amazing-api",
   "version": "1.0.0",
   "description": "For Amazing shop Website",
-  "main": "server.js",
+  "main": "build/server.js",
   "scripts": {
-    "start": "nodemon server.ts",
-    "build": "tsc --project ./"
+    "start": "node .",
+    "build": "tsc",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
