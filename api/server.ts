@@ -1,11 +1,10 @@
 import express from 'express';
-import * as data from './Mockdata';
+import { products } from './Mockdata';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.get('/api/products', (req, res) => {
-
-  res.send(data)
+  res.send(products);
 });
 
 app.get('/', (req, res) => res.send('Express + TypeScript Server'));
