@@ -2,7 +2,8 @@ import express from 'express';
 import { products } from './Mockdata';
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+var cors = require('cors')
+app.use(cors())
 app.get('/api/products', (req, res) => {
   res.send(products);
 });
