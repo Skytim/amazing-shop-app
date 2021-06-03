@@ -1,14 +1,14 @@
-function Rating({ rating, numReviews }) {
+const Rating = (props: { rating: number, numReviews: number }) => {
     const ratings = [1, 2, 3, 4, 5];
     return (
         <div className="rating">
             {
                 ratings.map((val) => {
                     return (
-                        <span><i className={
-                            rating >= val
+                        <span key={val}><i className={
+                            props.rating >= val
                                 ? 'fa fa-star'
-                                : rating >= val - 0.5
+                                : props.rating >= val - 0.5
                                     ? 'fa fa-star-half-o'
                                     : 'fa fa-star-o'}></i>
                         </span>
@@ -16,7 +16,7 @@ function Rating({ rating, numReviews }) {
                 })
             }
             <span>
-                {numReviews} Reviews
+                {props.numReviews} Reviews
             </span>
         </div>
     )

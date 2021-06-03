@@ -1,16 +1,18 @@
-import Rating from "./Rating";
+import Rating from '../components/Rating'
+import { ProductType } from '../types/ProductType';
 
-function Product({ product }) {
+function Product(props: { product: ProductType }) {
+    const product = props.product ?? {};
     return (
         <div key={product._id} className="card">
-            <a href="product.html">
+            <a href={'/product/' + product._id}>
                 <img className="medium" src={product.image} alt={product.name} />
             </a>
             <div className="card-body">
                 <a href={product.image}>
                     <h2>{product.name}</h2>
                 </a>
-                <Rating  rating={product.rating} numReviews={product.numReviews}/>
+                <Rating rating={product.rating} numReviews={product.numReviews} />
             </div>
             <div className="price">
                 $ {product.price}

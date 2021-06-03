@@ -9,7 +9,8 @@ export const data = {
             brand: 'City',
             rating: 4.5,
             numReviews: 8,
-            description: 'blue robot'
+            description: 'blue robot',
+            countInStock: 10
         },
         {
             _id: '2',
@@ -20,7 +21,8 @@ export const data = {
             brand: 'City',
             rating: 3,
             numReviews: 3,
-            description: 'robot with orrnage'
+            description: 'robot with orrnage',
+            countInStock: 5
         },
         {
             _id: '3',
@@ -31,7 +33,8 @@ export const data = {
             brand: 'Bandi',
             rating: 2.5,
             numReviews: 7,
-            description: 'bGG suit'
+            description: 'bGG suit',
+            countInStock: 4
         },
         {
             _id: '4',
@@ -42,7 +45,8 @@ export const data = {
             brand: 'Ghio',
             rating: 3,
             numReviews: 4,
-            description: 'blue robot'
+            description: 'blue robot',
+            countInStock: 0
         },
         {
             _id: '5',
@@ -53,7 +57,8 @@ export const data = {
             brand: 'Bandi',
             rating: 4.5,
             numReviews: 3,
-            description: 'blue robot'
+            description: 'blue robot',
+            countInStock: 4
         },
         {
             _id: '6',
@@ -64,7 +69,8 @@ export const data = {
             brand: 'Jueq',
             rating: 5,
             numReviews: 3,
-            description: 'Hello FG'
+            description: 'Hello FG',
+            countInStock: 4
         },
     ]
 }

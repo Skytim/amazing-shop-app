@@ -1,32 +1,38 @@
-import { data } from './Mockdata';
-import Product from './components/Product';
+
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from "react-router-dom";
+import HomePage from './views/HomePage';
+import ProductPage from "./views/ProductPage";
 function App() {
   return (
-    <div className="grid-container">
-      <header className="row">
-        <div>
-          <a className="brand" href="index.html">Amazing Shop</a>
-        </div>
-        <div>
-          <a href="cart.html">Cart</a>
-          <a href="signin.html">Sign In</a>
-        </div>
-      </header>
-      <main>
-        <div className="row center">
-          {
-            data.products.map(product => {
-              return (
-                <Product key={product._id} product={product} />
-              )
-            })
-          }
-        </div>
-      </main>
-      <footer className="row center">
-        All right reserved
-    </footer>
-    </div>
+    <BrowserRouter>
+      <div className="grid-container">
+        <header className="row">
+          <div>
+            <a className="brand" href={'/'}>Amazing Shop</a>
+          </div>
+          <div>
+            <a href="cart.html">Cart</a>
+            <a href="signin.html">Sign In</a>
+          </div>
+        </header>
+        <main>
+          <Switch>
+            <Route path="/product/:id" component={ProductPage} >
+            </Route>
+            <Route path="/" component={HomePage}>
+            </Route>
+          </Switch>
+        </main>
+        <footer className="row center">
+          All right reserved
+        </footer>
+      </div>
+    </BrowserRouter>
+
   );
 }
 
