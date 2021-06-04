@@ -5,6 +5,8 @@ import { detailProduct } from '../actions/Product';
 import Rating from '../components/Rating';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 type RouteInfo = {
     id: string;
@@ -14,7 +16,8 @@ export default function ProductPage({ match }: RouteComponentProps<RouteInfo>) {
 
     const dispatch = useDispatch();
     const { loading, error, product } = useSelector((state: any) => state.productDetail);
-
+    const [qty, setQty] = useState(1);
+    const history = useHistory();
     useEffect(() => {
 
     }, [dispatch]);
@@ -24,7 +27,10 @@ export default function ProductPage({ match }: RouteComponentProps<RouteInfo>) {
 
     }, [dispatch, match.params.id]);
 
-
+    const addToCartHandler = () => {
+        history.push(`/cart/${product._id}?qty=${qty}`);
+    }
+    
     return (
         loading ? (
             <LoadingBox></LoadingBox>) :
@@ -82,9 +88,26 @@ export default function ProductPage({ match }: RouteComponentProps<RouteInfo>) {
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <button className="primary">Add To Cart</button>
-                                    </li>
+                                    {
+                                        product.countInStock > 0 && (
+                                            <>
+                                                <li className="row">
+                                                    <div>Qty</div>
+                                                    <div>
+                                                        <select value={qty} onChange={e => setQty(Number(e.target.value))}>
+                                                            {[...Array(product.countInStock).keys()].map((x) =>
+                                                                (<option key={x + 1} value={x + 1}>{x + 1}</option>))
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <button className="primary" onClick={addToCartHandler}>Add To Cart</button>
+                                                </li>
+                                            </>
+                                        )
+                                    }
+
                                 </ul>
                             </div>
                         </div>
