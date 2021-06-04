@@ -1,28 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Product from '../components/Product'
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { ProductType } from '../types/ProductType';
-import { productData } from '../api';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { listProducts } from '../actions/Product';
 
 export default function HomePage() {
-    const [products, setProducts] = useState<ProductType[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    const dispatch = useDispatch();
+    const proudctList = useSelector((state: any) => state.proudctList);
+    const { loading, error, products } = proudctList;
+
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                setLoading(true);
-                const { data } = await productData();
-                setLoading(false);
-                setProducts(data);
-            } catch (err) {
-                setError(err.message);
-                setLoading(false);
-            }
-        };
-        fetchData();
-    }, [])
+       dispatch(listProducts())
+    }, [dispatch]);
+    
     return (
         <div>
             {

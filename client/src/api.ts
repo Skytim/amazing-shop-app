@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ProductType } from './types/ProductType';
 
 const request = axios.create({
   baseURL: process.env.NODE_ENV === 'development' ? 
@@ -6,4 +7,4 @@ const request = axios.create({
   'https://arcane-badlands-11766.herokuapp.com/'
 });
 
-export const productData = () => request.get('/api/products');
+export const productData = () => request.get<ProductType[]>('/api/products');

@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
+import { listProducts } from '../actions/Product';
 import Rating from '../components/Rating';
-import { data } from '../Mockdata';
-
+import { ProductType } from '../types/ProductType';
 
 type RouteInfo = {
     id: string;
@@ -9,7 +11,21 @@ type RouteInfo = {
 
 export default function ProductPage({ match }: RouteComponentProps<RouteInfo>) {
 
-    const product = data.products.find(x => x._id === match.params.id);
+    const dispatch = useDispatch();
+    const proudctList = useSelector((state: any) => state.proudctList);
+    const { products } = proudctList;
+    const [product, setProduct] = useState<ProductType>();
+
+    useEffect(() => {
+        dispatch(listProducts());
+    }, [dispatch]);
+
+    useEffect(() => {
+        const tempProduct = products?.find((x: any) => x._id === match.params.id);
+        setProduct(tempProduct);
+    }, [products, match.params.id]);
+
+
     if (!product) {
         return <div>Product Not Found</div>
     }
@@ -19,7 +35,7 @@ export default function ProductPage({ match }: RouteComponentProps<RouteInfo>) {
             <Link to="/">Back to Result</Link>
             <div className="row top">
                 <div className="col-2">
-                    <img className="large" src={process.env.PUBLIC_URL +product?.image} alt="" />
+                    <img className="large" src={process.env.PUBLIC_URL + product?.image} alt="" />
                 </div>
                 <div className="col-1">
                     <ul>
