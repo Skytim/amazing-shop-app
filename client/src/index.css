@@ -83,20 +83,23 @@ li {
   margin-top: 1rem;
 }
 
-button {
+input, select, textarea, button {
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 0.1rem #20a020 solid;
+  border: 0.1rem #7bd17b solid;
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffd60a;
+}
+
+button {
+  background-color: #f8f8f8;
   cursor: pointer;
 }
 
-button:hover {
-  border: 0.1rem #4444;
+input:hover, select:hover, textarea:hover, button :hover {
+  border: 0.1rem red;
 }
 
 button.primary {
@@ -188,16 +191,19 @@ img.large {
 .error {
   color: red
 }
-.alert{
-  padding:1rem;
+
+.alert {
+  padding: 1rem;
   border: 0.1rem solid transparent;
   border: 0.5rem;
 }
-.alert-info{
+
+.alert-info {
   color: #202020;
   background-color: #e0e0ff;
 }
-.alert-danger{
+
+.alert-danger {
   color: red;
   background-color: rgba(216, 155, 155, 0.267);
 }
