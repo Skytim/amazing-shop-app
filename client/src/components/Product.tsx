@@ -1,9 +1,6 @@
 import Rating from '../components/Rating'
 import { ProductType } from '../types/ProductType';
-import {
-
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 function Product(props: { product: ProductType }) {
     const product = props.product ?? {};
     return (

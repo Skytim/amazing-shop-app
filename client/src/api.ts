@@ -8,4 +8,6 @@ const request = axios.create({
 });
 
 export const productData = () => request.get<ProductType[]>('/api/products');
-export const productDeail = (productId: string) => request.get<ProductType[]>(`/api/product/${productId}`);
+export const productDeail = (productId: string) => request.get<ProductType>(`/api/product/${productId}`);
+
+export const cartDeail = (productId: string) => request.get<ProductType>(`/api/product/${productId}`);
