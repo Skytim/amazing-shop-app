@@ -8,6 +8,15 @@ app.get('/api/products', (req, res) => {
   res.send(products);
 });
 
+app.get('/api/product/:id', (req, res) => {
+  const product = products.find((x) => x._id === req.params.id);
+  if (product) {
+    res.send(product);
+  } else {
+    res.send(products);
+  }
+});
+
 app.get('/', (req, res) => res.send('Express + TypeScript Server'));
 
 app.listen(PORT, () => {

@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
-import { productListReducer } from './reducers/Product'
+import { productDetailReducer, productListReducer } from './reducers/Product'
 const initialState: any = {
 };
 export interface ProductListState {
@@ -10,7 +10,7 @@ export interface ProductListState {
         products: []
     }
 }
-const reducer = combineReducers({ proudctList: productListReducer, });
+const reducer = combineReducers({ proudctList: productListReducer, productDetail : productDetailReducer });
 declare global {
     interface Window {
         __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
