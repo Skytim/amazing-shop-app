@@ -1,14 +1,14 @@
 
 import {
-  BrowserRouter,
   Route,
-  Switch
+  Switch,
+  HashRouter
 } from "react-router-dom";
 import HomePage from './views/HomePage';
 import ProductPage from "./views/ProductPage";
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter >
       <div className="grid-container">
         <header className="row">
           <div>
@@ -31,7 +31,7 @@ function App() {
           All right reserved
         </footer>
       </div>
-    </BrowserRouter>
+    </HashRouter>
 
   );
 }

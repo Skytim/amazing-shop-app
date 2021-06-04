@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react'
 import Product from '../components/Product'
 import LoadingBox from '../components/LoadingBox';
