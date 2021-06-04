@@ -1,7 +1,8 @@
 # Amazing Shop Website
 
 ## Technologies used
-HTML
-CSS
-Font Awesome
-React
+- HTML
+- CSS
+- Font Awesome
+- React
+- Express
