@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/amazing-shop-app/static/css/main.75499f58.chunk.css",
-    "main.js": "/amazing-shop-app/static/js/main.f8cd867c.chunk.js",
-    "main.js.map": "/amazing-shop-app/static/js/main.f8cd867c.chunk.js.map",
-    "runtime-main.js": "/amazing-shop-app/static/js/runtime-main.a3d0fc89.js",
-    "runtime-main.js.map": "/amazing-shop-app/static/js/runtime-main.a3d0fc89.js.map",
-    "static/js/2.6ac2823f.chunk.js": "/amazing-shop-app/static/js/2.6ac2823f.chunk.js",
-    "static/js/2.6ac2823f.chunk.js.map": "/amazing-shop-app/static/js/2.6ac2823f.chunk.js.map",
-    "static/js/3.596cbb7b.chunk.js": "/amazing-shop-app/static/js/3.596cbb7b.chunk.js",
-    "static/js/3.596cbb7b.chunk.js.map": "/amazing-shop-app/static/js/3.596cbb7b.chunk.js.map",
+    "main.js": "/amazing-shop-app/static/js/main.bb4e3f72.chunk.js",
+    "main.js.map": "/amazing-shop-app/static/js/main.bb4e3f72.chunk.js.map",
+    "runtime-main.js": "/amazing-shop-app/static/js/runtime-main.f413979a.js",
+    "runtime-main.js.map": "/amazing-shop-app/static/js/runtime-main.f413979a.js.map",
+    "static/js/2.aa7207a2.chunk.js": "/amazing-shop-app/static/js/2.aa7207a2.chunk.js",
+    "static/js/2.aa7207a2.chunk.js.map": "/amazing-shop-app/static/js/2.aa7207a2.chunk.js.map",
+    "static/js/3.3ba6f81a.chunk.js": "/amazing-shop-app/static/js/3.3ba6f81a.chunk.js",
+    "static/js/3.3ba6f81a.chunk.js.map": "/amazing-shop-app/static/js/3.3ba6f81a.chunk.js.map",
     "index.html": "/amazing-shop-app/index.html",
     "static/css/main.75499f58.chunk.css.map": "/amazing-shop-app/static/css/main.75499f58.chunk.css.map",
-    "static/js/2.6ac2823f.chunk.js.LICENSE.txt": "/amazing-shop-app/static/js/2.6ac2823f.chunk.js.LICENSE.txt"
+    "static/js/2.aa7207a2.chunk.js.LICENSE.txt": "/amazing-shop-app/static/js/2.aa7207a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a3d0fc89.js",
-    "static/js/2.6ac2823f.chunk.js",
+    "static/js/runtime-main.f413979a.js",
+    "static/js/2.aa7207a2.chunk.js",
     "static/css/main.75499f58.chunk.css",
-    "static/js/main.f8cd867c.chunk.js"
+    "static/js/main.bb4e3f72.chunk.js"
   ]
 }
