@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../actions/Cart';
+import { addToCart, removeFromCart } from '../actions/Cart';
 import MessageBox from '../components/MessageBox';
 type RouteInfo = {
     id: string;
@@ -21,8 +21,9 @@ export default function CartPage({ match }: RouteComponentProps<RouteInfo>) {
         }
     }, [dispatch, qty, proudctId]);
 
-    const removeFromCart = (id: any) => {
+    const removeFromCartHandler = (id: any) => {
         console.log(id);
+        dispatch(removeFromCart(id));
     }
     const checkoutHandler = (id: any) => {
         console.log(id);
@@ -62,7 +63,7 @@ export default function CartPage({ match }: RouteComponentProps<RouteInfo>) {
                                                     ${item.price}
                                                 </div>
                                                 <div>
-                                                    <button type="button" onClick={() => removeFromCart(item.product)}>Delete</button>
+                                                    <button type="button" onClick={() => removeFromCartHandler(item.productId)}>Delete</button>
                                                 </div>
                                             </div>
                                         </li>)

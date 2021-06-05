@@ -1,6 +1,6 @@
 
 import { cartDeail } from "../api";
-import { CART_ADD_ITEM } from "../constants/Cart";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/Cart";
 
 
 export const addToCart = (productId: string, qty: number) => async (dispatch: any, getState: any) => {
@@ -17,5 +17,14 @@ export const addToCart = (productId: string, qty: number) => async (dispatch: an
             qty
         }
     })
-    localStorage.setItem('cartItems',JSON.stringify(getState().cart.cartItems));
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
 }
+
+export const removeFromCart = (productId: string) => async (dispatch: any, getState: any) => {
+    dispatch({
+        type: CART_REMOVE_ITEM,
+        payload: productId
+    })
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
+}
+
