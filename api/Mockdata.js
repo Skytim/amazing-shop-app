@@ -1,3 +1,20 @@
+import bcrypt from 'bcryptjs';
+
+export const users = [
+    {
+        name: 'Taa',
+        email: 'sky888@gmail.com',
+        password: bcrypt.hashSync('12345', 8),
+        isAdmin: true
+    },
+    {
+        name: 'Faa',
+        email: 'sk12121y888@gmail.com',
+        password: bcrypt.hashSync('12345678', 8),
+        isAdmin: false
+    }
+];
+
 
 export const products = [
     {
