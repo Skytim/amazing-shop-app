@@ -3,7 +3,7 @@ import { cartDeail } from "../api";
 import { CART_ADD_ITEM } from "../constants/Cart";
 
 
-export const addToCart = (productId: string, qty: string) => async (dispatch: any, getState: any) => {
+export const addToCart = (productId: string, qty: number) => async (dispatch: any, getState: any) => {
     const { data } = await cartDeail(productId);
 
     dispatch({

@@ -13,14 +13,17 @@ export default function HomePage() {
     const { loading, error, products } = proudctList;
 
     useEffect(() => {
-       dispatch(listProducts())
+        dispatch(listProducts())
     }, [dispatch]);
-    
+
     return (
         <div>
             {
                 loading ? (
-                    <LoadingBox></LoadingBox>) :
+                    <div className="row center">
+                        <LoadingBox></LoadingBox>
+                    </div>
+                ) :
                     error ? (
                         <MessageBox variant="danger" >{error}</MessageBox>
                     ) : (
